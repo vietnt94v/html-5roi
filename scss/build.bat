@@ -1,0 +1,1 @@
+compass watch --scss-dir . --css-dir ../css --no-line-comments --sourcemap --force

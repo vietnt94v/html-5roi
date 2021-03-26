@@ -1,0 +1,129 @@
+
+.no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100px;
+}
+
+.language {
+  &-item {
+    display: inline-block;
+    white-space: nowrap;
+    img {
+      width: 25px;
+    }
+    .flag {
+      margin-right: 3px;
+    }
+    .txt {
+      position: relative;;
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.btn {
+  &-link {
+    &.has-arrow {
+      &:after {
+        content: "\e606";
+        font-family: 'simple-line-icons';
+        font-size: 1em;
+        display: inline-block;
+        padding-left: 0;
+        color: currentColor;
+      }
+    }
+  }
+}
+
+.lh {
+  &-1 {
+    line-height: 1 !important
+  }
+  &-sm {
+    line-height: 1.25 !important;
+  }
+  &-base {
+    line-height: 1.5 !important;
+  }
+  &-lg {
+    line-height: 2 !important;
+  }
+}
+
+.border {
+
+  &-top-none {
+    border-top: 0 !important;
+  }
+
+  $borders-width: 1, 2, 3, 4, 5;
+
+  @each $width in $borders-width {
+    &-top-#{$width} {
+      border-top-width: #{$width}px !important;
+    }
+    &-left-#{$width} {
+      border-left-width: #{$width}px !important;
+    }
+    &-bottom-#{$width} {
+      border-bottom-width: #{$width}px !important;
+    }
+    &-right-#{$width} {
+      border-right-width: #{$width}px !important;
+    }
+  }
+
+}
+
+.radius {
+  &-none {
+    border-radius: 0;
+  }
+}
+
+.custom-radio {
+  cursor: pointer;
+  input[type="radio"] {
+    position: absolute;
+    top: -999px;
+    left: -999px;
+    visibility: hidden;
+  }
+  input[type="radio"] ~ span {
+    display: inline-block;
+    padding: 8px 40px;
+    background-color: #fff;
+    border: 1px solid #cad7e0;
+    transition: all .2s ease;
+  }
+  input[type="radio"]:checked ~ span {
+    background-color: $info-light;
+    color: #000;
+  }
+}
+
+.list {
+  &-dots {
+    li {
+      position: relative;
+      padding-left: 1em;
+      &:before {
+        content: "•";
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
