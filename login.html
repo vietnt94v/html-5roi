@@ -480,6 +480,7 @@
           transform: translateY(-50%);
           transition: all 0.2s ease;
           color: #9aa5b5;
+          z-index: 1;
         }
         .login-form .form-control.has-data + .label-title,
         .login-form .form-control:focus + .label-title {
@@ -491,6 +492,9 @@
           padding: 22px 16px 8px;
           font-size: 16px;
           border-radius: 4px;
+          position: relative;
+          background-color: transparent !important;
+          z-index: 2;
         }
         .login-form .btn-submit {
           height: 54px;
